@@ -24,6 +24,7 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
   * Se personalizó `OrbitControls` activando `screenSpacePanning` e inercia (`enableDamping`), asignando el clic izquierdo al arrastre lateral (`PAN`), la rueda al zoom (`DOLLY`) y el clic derecho a la rotación 3D (`ROTATE`).
 
 * **Resultado:**
+  ![Mapa mundial](SistemaPlanetario.png)
   
 
 ### Tarea 2: Lectura de Datos CSV, Rutas de España y Control de Aglomeración
@@ -41,6 +42,7 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
   * Para resolver la aglomeración en estuarios cortos (como Lisboa) y evitar embarcaciones en zonas fluviales interiores, se implementaron filtros por longitud mínima (`LONGITUD_MINIMA`), detección de trayectos duplicados o de sentido inverso (`TOLERANCIA_DUPLICADO`), lista de exclusión (`RUTAS_EXCLUIDAS`) y límite de barcos locales dentro de un radio geográfico (`UMBRAL_RUTA_CORTA`, `RADIO_ZONA`).
 
 * **Resultado:**
+  Está en el archivo rutas_ferry.csv
   
 
 ### Tarea 3: Modelado 3D de Ferrís y Animación a Velocidad Uniforme
@@ -56,6 +58,7 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
   * Se asignó una distancia inicial aleatoria para repartir los ferris a lo largo de las rutas, calculando su orientación mediante `$\text{atan2}(\Delta y, \Delta x)$` con suavizado angular en los vértices y escala dinámica adaptada a la distancia de la cámara (`THREE.MathUtils.clamp`).
 
 * **Resultado:**
+  ![Modelo 3D Barco](SistemaPlanetario.png)
   
 
 ### Tarea 4: Selección con Raycaster y Modos de Cámara ("Vista Mapa Eje Z" y "A Bordo")
@@ -75,6 +78,8 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
     * **Vista a Bordo (Percepción del Barco):** Desactiva `OrbitControls`, alinea `camera.up` con `$(0, 0, 1)$`, reduce `camera.near` a `$0.00005$` para evitar recortes sobre la proa y actualiza `camera.position` y `camera.lookAt` sobre el puente siguiendo el rumbo del ferry elegido.
 
 * **Resultado:**
+  ![Vista desde el barco](SistemaPlanetario.png)
+  ![Vista general](SistemaPlanetario.png)
   
 
 ### Fuentes consultadas
