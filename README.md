@@ -24,7 +24,7 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
   * Se personalizó `OrbitControls` activando `screenSpacePanning` e inercia (`enableDamping`), asignando el clic izquierdo al arrastre lateral (`PAN`), la rueda al zoom (`DOLLY`) y el clic derecho a la rotación 3D (`ROTATE`).
 
 * **Resultado:**
-  ![Mapa mundial](earth.png)
+  ![Mapa mundial](src/earth.png)
   
 
 ### Tarea 2: Lectura de Datos CSV, Rutas de España y Control de Aglomeración
@@ -78,7 +78,9 @@ Este repositorio contiene el desarrollo de un visualizador 3D interactivo de rut
     * **Vista a Bordo (Percepción del Barco):** Desactiva `OrbitControls`, alinea `camera.up` con `$(0, 0, 1)$`, reduce `camera.near` a `$0.00005$` para evitar recortes sobre la proa y actualiza `camera.position` y `camera.lookAt` sobre el puente siguiendo el rumbo del ferry elegido.
 
 * **Resultado:**
+  Vista desde el barco:
   ![Vista desde el barco](VistaBarco.png)
+  Vista general:
   ![Vista general](VistaGeneral.png)
   
 
